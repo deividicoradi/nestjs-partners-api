@@ -11,7 +11,7 @@ Content-Type: application/json
     "name": "New Event",
     "description": "This is a new event",
     "date": "2017-01-01T00:00:00",
-    "price": 0
+    "price": 100
 }
 
 ###
@@ -44,7 +44,7 @@ POST http://localhost:3000/events/{{eventId}}/spots
 Content-Type: application/json
 
 {
-  "name": "B5"
+  "name": "A5"
 }
 
 ###
@@ -58,5 +58,5 @@ X-Api-Token: 123
 {
   "spots": ["{{ spotName }}"],
   "ticket_kind": "full",
-  "email": "testtest.com"
+  "email": "test@test.com"
 }

@@ -4,15 +4,13 @@ RUN apt update && apt install -y openssl procps
 
 RUN npm install -g @nestjs/cli@10.3.2
 
-RUN mkdir -p /home/node/app
-
 WORKDIR /home/node/app
 
-COPY . .
+COPY package*.json ./
 
 RUN npm install --legacy-peer-deps
 
-RUN npm install webpack
+COPY . .
 
 RUN npm run build
 
